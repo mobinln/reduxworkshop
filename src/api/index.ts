@@ -21,3 +21,20 @@ export const get = async (url: string, config?: AxiosRequestConfig) => {
         return onError(error);
     }
 };
+
+export const post = async (url: string, data?: any, config?: AxiosRequestConfig) => {
+    const onSuccess = (response: AxiosResponse) => {
+        return response.data;
+    };
+
+    const onError = (error: AxiosResponse) => {
+        throw error;
+    };
+
+    try {
+        const response = await apiAgent.post(url, data, config);
+        return onSuccess(response);
+    } catch (error:any) {
+        throw onError(error);
+    }
+};

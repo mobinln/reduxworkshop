@@ -1,9 +1,9 @@
-import { Typography } from "@mui/material";
+import ProductsList from "../features/products/ProductsList";
 
 export default function Products() {
     return (
         <div>
-            <Typography>Products</Typography>
+            <ProductsList />
         </div>
     );
 }

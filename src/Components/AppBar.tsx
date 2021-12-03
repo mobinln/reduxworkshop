@@ -5,6 +5,8 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
+import { IconButton } from "@mui/material";
+import { ShoppingCartRounded } from "@mui/icons-material";
 
 const MainAppBar = () => {
     return (
@@ -22,9 +24,9 @@ const MainAppBar = () => {
                             Products
                         </Button>
                         <div style={{ flexGrow: 1 }} />
-                        <Button sx={{ my: 2, color: "white" }} component={Link} to="/cart">
-                            cart
-                        </Button>
+                        <IconButton sx={{ my: 2, color: "white" }} component={Link} to="/cart">
+                            <ShoppingCartRounded />
+                        </IconButton>
                         <Button sx={{ my: 2, color: "white" }} component={Link} to="/login">
                             Login
                         </Button>
